@@ -1,91 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/') }}admin/assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Permissions Management</title>
-</head>
-
-<body>
-    <div class="container">
-        <!-- Sidebar Section -->
-        <aside>
-            <div class="toggle">
-                <div class="logo">
-                    <img src="{{ asset('/') }}admin/images/logo.png">
-                    <h2>Asmr<span class="danger">Prog</span></h2>
-                </div>
-                <div class="close" id="close-btn">
-                    <span class="material-icons-sharp">close</span>
+@extends('layouts.admin')
+@section('title','Permissions')
+@section('admin_content')
+<div class="pc-container">
+    <div class="pc-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-sm-auto">
+                        <div class="page-header-title">
+                            <h5 class="mb-0">All Permissions</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-auto">
+                        <ul class="breadcrumb">
+                            <a href="{{ route('permissions.create') }}" class="btn btn-primary">+ Add New</a>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-            <div class="sidebar">
-                <a href="#">
-                    <span class="material-icons-sharp">dashboard</span>
-                    <h3>Dashboard</h3>
-                </a>
-                <a href="#" class="active">
-                    <span class="material-icons-sharp">security</span>
-                    <h3>Permissions</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">logout</span>
-                    <h3>Logout</h3>
-                </a>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+        <div class="row">
+            <!-- Permissions Table Start -->
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header table-card-header">
+                        <h5>Permission List</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="dt-responsive table-responsive">
+                            <table id="permissions-table" class="table table-striped table-bordered nowrap table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>SL</th>
+                                        <th>Permission Name</th>
+                                        {{-- <th>Guard Name</th> --}}
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($permissions as $permission)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $permission->name }}</td>
+                                            {{-- <td>{{ $permission->guard_name }}</td> --}}
+                                            <td class="d-flex">
+                                                <a href="{{ route('permissions.edit', $permission->id) }}" class="btn btn-primary btn-sm me-1 edit">
+                                                    <i class="fa fa-edit"></i>
+                                                </a>
+                                                <button class="btn btn-danger btn-sm delete" data-id="{{ $loop->iteration }}">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                                <form id="delete-form-{{ $loop->iteration }}" action="{{ route('permissions.destroy', $permission->id) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>SL</th>
+                                        <th>Permission Name</th>
+                                       
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </aside>
-        <!-- End of Sidebar Section -->
-
-        <!-- Main Content -->
-        <main>
-            <h1>Manage Permissions</h1>
-
-            <div class="recent-orders">
-                <h2>Permissions</h2>
-                <a href="{{ route('permissions.create') }}" class="btn btn-primary mb-3">Add Permission</a>
-
-                @if(session('success'))
-                    <div class="alert alert-success">{{ session('success') }}</div>
-                @endif
-
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($permissions as $permission)
-                            <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                <td>{{ $permission->name }}</td>
-                                <td>
-                                    <a href="{{ route('permissions.edit', $permission->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <form action="{{ route('permissions.destroy', $permission->id) }}" method="POST" style="display: inline;">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </main>
-        <!-- End of Main Content -->
+            <!-- Permissions Table End -->
+        </div>
+        <!-- [ Main Content ] end -->
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('/') }}admin/assets/js/index.js"></script>
-</body>
-
-</html>
-
+</div>
+@endsection

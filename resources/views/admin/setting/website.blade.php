@@ -14,7 +14,7 @@
                     </div>
                     <div class="col-sm-auto">
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ route('admin.home') }}"><i class="ph-duotone ph-house"></i></a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"><i class="ph-duotone ph-house"></i></a></li>
                             <li class="breadcrumb-item"><a href="javascript: void(0)">Home</a></li>
                             <li class="breadcrumb-item" aria-current="page">Website Setting</li>
                         </ul>
