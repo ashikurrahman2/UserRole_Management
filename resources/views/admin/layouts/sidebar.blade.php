@@ -39,12 +39,29 @@
                         <span class="pc-mtext">Dashboard</span>
                         <span class="pc-arrow"></span></a>
                 </li>
+
+                <li class="pc-item pc-hasmenu">
+                    <a href="#!" class="pc-link">
+                            <span class="pc-micon"><i class="ti ti-settings"></i></span>
+                            <span class="pc-mtext">Property</span>
+                            <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                    </a>
+
+                    <ul class="pc-submenu">
+                        <li class="pc-item"><a class="pc-link"
+                            href="{{route('property.index')}}">Property List</a>
+                        </li>
+                  
+                    </ul>
+                </li>
                 <li class="pc-item pc-hasmenu">
                     <a href="#!" class="pc-link">
                             <span class="pc-micon"><i class="ti ti-settings"></i></span>
                             <span class="pc-mtext">Setting</span>
                             <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
                     </a>
+
+                 
                     <ul class="pc-submenu">
                         <li class="pc-item"><a class="pc-link"
                             href="{{route('seo.index')}}">SEO Setting</a>

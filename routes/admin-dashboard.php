@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\SeoController;
+use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\PermissionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SettingController;
@@ -13,6 +14,12 @@ Route::prefix('admin')->middleware('auth:admin')->group(function () {
     Route::resource('permissions',PermissionController::class);
     Route::get('/dashboard', function () { return view('admin.dashboard'); })->name('admin.dashboard');
     Route::get('logout', [LoginController::class, 'destroy'])->name('admin.logout');
+});
+
+Route::prefix('admin')->middleware('auth:admin')->group(function () {
+    //Website route
+    Route::resource('property',PropertyController::class);
+   
 });
 
 Route::middleware('auth:admin')->group(function() {

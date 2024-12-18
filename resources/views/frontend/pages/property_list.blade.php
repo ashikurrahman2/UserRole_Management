@@ -318,7 +318,7 @@
                                 <a href="single-property-1.html" class="homes-img">
                                     <div class="homes-tag button alt sale">For Sale</div>
                                     <div class="homes-price">$9,000/mo</div>
-                                    <img src="images/blog/b-1.jpg" alt="home-1" class="img-responsive">
+                                    <img src="{{ asset('/') }}frontend/images/blog/b-1.jpg" alt="home-1" class="img-responsive">
                                 </a>
                             </div>
                             <div class="button-effect">
@@ -359,7 +359,7 @@
                     </ul>
                     <div class="footer">
                         <a href="agent-details.html">
-                            <img src="images/testimonials/ts-3.jpg" alt="" class="mr-2"> katy Teddy
+                            <img src="{{ asset('/') }}frontend/images/testimonials/ts-3.jpg" alt="" class="mr-2"> katy Teddy
                         </a>
                         <span>
                             <i class="fa fa-calendar"></i> 2 months ago
@@ -375,7 +375,7 @@
                                     <div class="homes-tag button alt featured">Featured</div>
                                     <div class="homes-tag button sale rent">For Rent</div>
                                     <div class="homes-price">$3,000/mo</div>
-                                    <img src="images/feature-properties/fp-10.jpg" alt="home-1" class="img-responsive">
+                                    <img src="{{ asset('/') }}frontend/images/feature-properties/fp-10.jpg" alt="home-1" class="img-responsive">
                                 </a>
                             </div>
                             <div class="button-effect">
@@ -416,7 +416,7 @@
                     </ul>
                     <div class="footer">
                         <a href="agent-details.html">
-                            <img src="images/testimonials/ts-4.jpg" alt="" class="mr-2"> Jhon Malon
+                            <img src="{{ asset('/') }}frontend/images/testimonials/ts-4.jpg" alt="" class="mr-2"> Jhon Malon
                         </a>
                         <span>
                             <i class="fa fa-calendar"></i> 2 months ago
@@ -431,7 +431,7 @@
                                 <a href="single-property-1.html" class="homes-img">
                                     <div class="homes-tag button alt sale">For Sale</div>
                                     <div class="homes-price">$9,000/mo</div>
-                                    <img src="images/feature-properties/fp-11.jpg" alt="home-1" class="img-responsive">
+                                    <img src="{{ asset('/') }}frontend/images/feature-properties/fp-11.jpg" alt="home-1" class="img-responsive">
                                 </a>
                             </div>
                             <div class="button-effect">
@@ -472,7 +472,7 @@
                     </ul>
                     <div class="footer">
                         <a href="agent-details.html">
-                            <img src="images/testimonials/ts-5.jpg" alt="" class="mr-2"> Susan Delman
+                            <img src="{{ asset('/') }}frontend/images/testimonials/ts-5.jpg" alt="" class="mr-2"> Susan Delman
                         </a>
                         <span>
                             <i class="fa fa-calendar"></i> 2 months ago
@@ -487,7 +487,7 @@
                                 <a href="single-property-1.html" class="homes-img">
                                     <div class="homes-tag button sale rent">For Rent</div>
                                     <div class="homes-price">$3,000/mo</div>
-                                    <img src="images/feature-properties/fp-12.jpg" alt="home-1" class="img-responsive">
+                                    <img src="{{ asset('/') }}frontend/images/feature-properties/fp-12.jpg" alt="home-1" class="img-responsive">
                                 </a>
                             </div>
                             <div class="button-effect">
@@ -528,7 +528,7 @@
                     </ul>
                     <div class="footer">
                         <a href="agent-details.html">
-                            <img src="images/testimonials/ts-6.jpg" alt="" class="mr-2"> Chan Lee
+                            <img src="{{ asset('/') }}frontend/images/testimonials/ts-6.jpg" alt="" class="mr-2"> Chan Lee
                         </a>
                         <span>
                             <i class="fa fa-calendar"></i> 2 months ago
