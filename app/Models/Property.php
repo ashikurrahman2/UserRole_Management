@@ -74,8 +74,10 @@ public static function updateProperty($request, $id)
    private static function saveBasicInfo($property, $request, $imageUrl)
    {
        $property->property_image           = $imageUrl;
-       $property->slider_title           = $request->slider_title;
-       $property->slider_subtitle        = $request->slider_subtitle;
+       $property->property_title           = $request->property_title;
+       $property->property_address        = $request->property_address;
+       $property->property_elements        = $request->property_elements;
+       $property->property_amount        = $request->property_amount;
        $property->save();
    }
 
