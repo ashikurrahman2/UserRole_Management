@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('property_address')->nullable();
             $table->string('property_elements')->nullable();
             $table->string('property_amount')->nullable();
+            $table->string('property_action')->nullable();
             $table->timestamps();
         });
     }

@@ -6,6 +6,8 @@
     @include('admin.layouts.meta')
     <!-- [style] -->
     @include('admin.layouts.style')
+    @flasher_render
+
 </head>
 <!-- [Head] end -->
 <!-- [Body] Start -->

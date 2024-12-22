@@ -39,6 +39,7 @@
                       <th>Property Address</th>
                       <th>Property Element</th>
                       <th>Property Amount</th>
+                      <th>Property Action</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -53,6 +54,7 @@
                         <th>Property Address</th>
                         <th>Property Element</th>
                         <th>Property Amount</th>
+                        <th>Property Action</th>
                         <th>Action</th>
                     </tr>
                   </tfoot>
@@ -80,13 +82,14 @@
                 <div class="form-group">
                   <label for="property_title" class="col-form-label pt-0">Property Title<sup class="text-size-20 top-1">*</sup></label>
                     <input type="text" class="form-control" id="property_title" name="property_title" required>
-                    <small id="emailHelp" class="form-text text-muted">This is your Brand</small>
+                    <small id="emailHelp" class="form-text text-muted">This is your property</small>
                 </div>
-                <div class="form-group">
-                  <label for="property_image" class="col-form-label pt-0">Property Image <sup class="text-size-20 top-1">*</sup></label>
-                  <input type="file" class="dropify" data-height="200" name="property_image" />
-                  <small id="emailHelp" class="form-text text-muted">This is your Brand Logo</small>
-                </div>
+          
+                <div class="col-md-12">
+                  <label for="property_image" class="col-form-label pt-0">Property Image<sup class="text-size-20 top-1">*</sup></label>
+                  <input type="file" class="dropify" data-height="200" name="property_image"  required />
+                  <small id="imageHelp" class="form-text text-muted">This is your Property image</small>
+              </div>
 
                 <div class="form-group">
                     <label for="property_address" class="col-form-label pt-0">Property Address<sup class="text-size-20 top-1">*</sup></label>
@@ -106,6 +109,13 @@
                       <small id="emailHelp" class="form-text text-muted">This is your Brand</small>
                   </div>
 
+                  <div class="form-group">
+                    <label for="property_action" class="col-form-label pt-0">Property Action<sup class="text-size-20 top-1">*</sup></label>
+                      <input type="text" class="form-control" id="property_action" name="property_action" required>
+                      <small id="emailHelp" class="form-text text-muted">This is your Property</small>
+                  </div>
+
+                  
            
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-primary"> <span class="d-none"> loading ......</span> Submit</button>
@@ -147,6 +157,7 @@
                 { data: 'property_address', name: 'property_address' },
                 { data: 'property_elements', name: 'property_elements' },
                 { data: 'property_amount', name: 'property_amount' },
+                { data: 'property_action', name: 'property_action' },
                 { data: 'action', name: 'action', orderable: false, searchable: false }
             ]
       });

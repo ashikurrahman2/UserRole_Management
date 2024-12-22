@@ -19,6 +19,7 @@ class Property extends Model
         'property_title',
         'property_address',
         'property_elements',
+        'property_action',
         'property_amount',
     ];
 
@@ -77,6 +78,7 @@ public static function updateProperty($request, $id)
        $property->property_title           = $request->property_title;
        $property->property_address        = $request->property_address;
        $property->property_elements        = $request->property_elements;
+       $property->property_action        = $request->property_action;
        $property->property_amount        = $request->property_amount;
        $property->save();
    }
