@@ -59,7 +59,3 @@
     </div>
   </form>
   
-  
-  {{-- For file upload script --}}
-  <script src="{{ asset('/') }}admin/assets/fileuploads/js/fileupload.js"></script>
-  <script src="{{ asset('/') }}admin/assets/fileuploads/js/file-upload.js"></script>
