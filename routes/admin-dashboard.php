@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\PropertyController;
+use App\Http\Controllers\Admin\RentController;
 use App\Http\Controllers\PermissionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SettingController;
@@ -19,6 +20,7 @@ Route::prefix('admin')->middleware('auth:admin')->group(function () {
 Route::prefix('admin')->middleware('auth:admin')->group(function () {
     //Website route
     Route::resource('property',PropertyController::class);
+    Route::resource('rent',RentController::class);
    
 });
 
