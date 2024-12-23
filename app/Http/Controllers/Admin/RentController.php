@@ -62,6 +62,7 @@ class RentController extends Controller
 
             'rentproperty_id'=>'required|string|max:500',
             'rentproperty_type'=> 'required|string|max:500',
+            'rent_description'=> 'required|string|max:500',
             'rentproperty_status'=> 'required|string|max:500',
             'rentproperty_price'=> 'required|string|max:500',
             'rent_rooms' => 'required|integer|max:255',
@@ -70,6 +71,11 @@ class RentController extends Controller
             'garages' => 'required|integer|max:255',
             'build_up' => 'required|date',
         ]);
+         //  Remove HTML tag
+             $request->merge([
+                'rent_description' => strip_tags($request->rent_description),
+            ]);
+
         Rent::newRent($request);
         $this->toastr->success('Rent created successfully!');
         return back();
@@ -101,6 +107,7 @@ class RentController extends Controller
 
             'rentproperty_id'=>'required|string|max:500',
             'rentproperty_type'=> 'required|string|max:500',
+            'rent_description'=> 'required|string|max:500',
             'rentproperty_status'=> 'required|string|max:500',
             'rentproperty_price'=> 'required|string|max:500',
             'rent_rooms' => 'required|integer|max:255',

@@ -13,6 +13,13 @@
             <small id="emailHelp" class="form-text text-muted">This is your rent</small>
         </div>
 
+        <div class="col-md-12">
+          <div class="mb-3">
+              <label class="form-label">Rentproperty Description</label>
+              <textarea class="form-control textarea" name="rent_description" id="summernote" rows="4" >{{ $rent->rent_description }}</textarea> 
+          </div>
+      </div>
+
         <div class="form-group">
           <label for="rentproperty_status" class="col-form-label pt-0">Rentproperty Status<sup class="text-size-20 top-1">*</sup></label>
             <input type="text" class="form-control" id="rentproperty_status" name="rentproperty_status" {{ $rent->rentproperty_status }} required>

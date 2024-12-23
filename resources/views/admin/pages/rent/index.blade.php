@@ -36,6 +36,7 @@
                       <th>SL</th>
                       <th>Rentproperty ID</th>
                       <th>Rentproperty Type</th>
+                      <th>Rentproperty Description</th>
                       <th>Rentproperty Status</th>
                       <th>Rentproperty Price</th>
                       <th>Rent Rooms</th>
@@ -54,6 +55,7 @@
                         <th>SL</th>
                         <th>Rentproperty ID</th>
                         <th>Rentproperty Type</th>
+                        <th>Rentproperty Description</th>
                         <th>Rentproperty Status</th>
                         <th>Rentproperty Price</th>
                         <th>Rent Rooms</th>
@@ -96,6 +98,13 @@
                       <input type="text" class="form-control" id="rentproperty_type" name="rentproperty_type" required>
                       <small id="emailHelp" class="form-text text-muted">This is your rent</small>
                   </div>
+
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                        <label class="form-label">Rentproperty Description</label>
+                        <textarea class="form-control textarea" name="rent_description" id="summernote" rows="4" >{{old('rent_description')}}</textarea> 
+                    </div>
+                </div>
 
                   <div class="form-group">
                     <label for="rentproperty_status" class="col-form-label pt-0">Rentproperty Status<sup class="text-size-20 top-1">*</sup></label>
@@ -174,6 +183,7 @@
                 { data: 'DT_RowIndex', name: 'DT_RowIndex' },
                 { data: 'rentproperty_id', name: 'rentproperty_id' },
                 { data: 'rentproperty_type', name: 'rentproperty_type' },
+                { data: 'rent_description', name: 'rent_description' },
                 { data: 'rentproperty_status', name: 'rentproperty_status' },
                 { data: 'rentproperty_price', name: 'rentproperty_price' },
                 { data: 'rent_rooms', name: 'rent_rooms' },
@@ -193,8 +203,19 @@
         });
     });
 
-  //dropify image
- 
+// Summernote script
+  $(document).ready(function() {
+        $('#summernote').summernote({
+            height: 200,
+            callbacks: {
+                onChange: function(contents, $editable) {
+                    // Strip HTML tags for plain text
+                    let textOnly = $('<div>').html(contents).text();
+                    $('#summernote').val(textOnly);
+                }
+            }
+        });
+    });
   </script>
   
 @endsection

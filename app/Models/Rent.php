@@ -14,6 +14,7 @@ class Rent extends Model
         protected $fillable = [
             'rentproperty_id',
             'rentproperty_type',
+            'rent_description',
             'rentproperty_status',
             'rentproperty_price',
             'rent_rooms',
@@ -38,6 +39,7 @@ class Rent extends Model
         {
             $rent->rentproperty_id       = $request->rentproperty_id;
             $rent->rentproperty_type     = $request->rentproperty_type;
+            $rent->rent_description      = $request->rent_description;
             $rent->rentproperty_status   = $request->rentproperty_status;
             $rent->rentproperty_price    = $request->rentproperty_price;
             $rent->rent_rooms            = $request->rent_rooms;
