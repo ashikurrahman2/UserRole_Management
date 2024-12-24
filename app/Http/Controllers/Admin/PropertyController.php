@@ -74,12 +74,14 @@ class PropertyController extends Controller
     {
         $request->validate([
 
-            'property_title'=>'required|string|max:500',
-            'property_address'=> 'required|string|max:500',
-            'property_elements'=> 'required|string|max:500',
-            'property_action'=> 'required|string|max:255',
+            'property_title' => 'required|string|max:500',
+            'property_address' => 'required|string|max:500',
+            'property_elements' => 'required|string|max:500',
+            'property_bath' => 'required|numeric|max:500',
+            'property_sqrt' => 'required|string|max:500',
+            'property_action' => 'required|string|max:255',
             'property_amount' => 'required|string|max:255',
-            'property_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'property_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         
         Property::newProperty($request);
@@ -118,6 +120,8 @@ class PropertyController extends Controller
             'property_title' => 'required|string|max:500',
             'property_address' => 'required|string|max:500',
             'property_elements' => 'required|string|max:500',
+            'property_bath' => 'required|numeric|max:500',
+            'property_sqrt' => 'required|string|max:500',
             'property_action' => 'required|string|max:255',
             'property_amount' => 'required|string|max:255',
             'property_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -145,6 +149,8 @@ class PropertyController extends Controller
             'property_title' => $validated['property_title'],
             'property_address' => $validated['property_address'],
             'property_elements' => $validated['property_elements'],
+            'property_bath' => $validated['property_bath'],
+            'property_sqrt' => $validated['property_sqrt'],
             'property_action' => $validated['property_action'],
             'property_amount' => $validated['property_amount'],
         ]);

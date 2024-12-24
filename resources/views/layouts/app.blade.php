@@ -1,112 +1,115 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="zxx">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+<!-- Mirrored from code-theme.com/html/findhouses/index-15.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 15 Dec 2024 10:04:00 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="html 5 template">
+    <meta name="author" content="">
+    <title>Jomijoma Limited | @yield('title')</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/') }}frontend/assets/favicon.ico">
+    <link rel="stylesheet" href="{{ asset('/') }}frontend/assets/css/jquery-ui.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i%7CMontserrat:600,800" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/fontawesome-5-all.min.css">
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/font-awesome.min.css">
+    <!-- ARCHIVES CSS -->
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/search.css">
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/animate.css">
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/aos.css">
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/aos2.css">
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/lightcase.css">
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/menu.css">
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/slick.css">
+    <link rel="stylesheet" href="{{asset('/')}}frontend/assets/css/styles.css">
+    <link rel="stylesheet" id="color" href="{{asset('/')}}frontend/assets/css/colors/green.css">
+</head>
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-        {{-- Real state css --}}
-         <!-- CSS Files -->
-    <link rel="stylesheet" href="{{ asset('frontend/css/fontawesome-all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/fontawesome-5-all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/search.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/aos.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/lightcase.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/menu.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/styles.css') }}">
-    <link rel="stylesheet" id="color" href="{{ asset('frontend/css/colors/green.css') }}">
-    </head>
-    {{-- <body class="font-sans antialiased"> --}}
-        <body class="th-15 homepage-4">
-        {{-- <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
-
-            <!-- Page Heading -->
-            @isset($header)
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endisset
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div> --}}
-
-        {{-- Realstate --}}
+<body class="th-15 homepage-4">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- START SECTION HEADINGS -->
+        <!-- Header Container
+        ================================================== -->
         @include('frontend.layouts.header')
+        <!-- END HEADER SEARCH -->
 
         @yield('content')
 
-
         @include('frontend.layouts.footer')
 
+        <!-- ARCHIVES JS -->
+        <script src="{{asset('/')}}frontend/assets/js/jquery-3.5.1.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/jquery-ui.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/tether.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/moment.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/bootstrap.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/mmenu.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/mmenu.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/aos.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/aos2.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/slick.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/fitvids.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/jquery.waypoints.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/typed.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/jquery.counterup.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/isotope.pkgd.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/smooth-scroll.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/lightcase.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/owl.carousel.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/ajaxchimp.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/newsletter.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/jquery.form.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/jquery.validate.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/search.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/searched.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/forms-2.js"></script>
+        <script src="{{asset('/')}}frontend/assets/js/color-switcher.js"></script>
+        <script>
+            $(window).on('scroll load', function() {
+                $("#header.cloned #logo img").attr("src", $('#header #logo img').attr('data-sticky-logo'));
+            });
 
-        {{-- Realstate script --}}
+        </script>
 
-           <!-- JS Files -->
-    <script src="{{ asset('frontend/js/jquery-3.5.1.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/jquery-ui.js') }}"></script>
-    <script src="{{ asset('frontend/js/tether.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/moment.js') }}"></script>
-    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/mmenu.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/aos.js') }}"></script>
-    <script src="{{ asset('frontend/js/slick.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/jquery.waypoints.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/typed.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/jquery.counterup.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/lightcase.js') }}"></script>
-    <script src="{{ asset('frontend/js/owl.carousel.js') }}"></script>
-    <script src="{{ asset('frontend/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/jquery.validate.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/script.js') }}"></script>
+        <!-- Slider Revolution scripts -->
+        <script src="{{asset('/')}}frontend/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+        <script src="{{asset('/')}}frontend/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
 
-    <!-- Custom JS -->
-    <script>
-        $(window).on('scroll load', function() {
-            $("#header.cloned #logo img").attr("src", $('#header #logo img').attr('data-sticky-logo'));
-        });
+        <script>
+            var typed = new Typed('.typed', {
+                strings: ["House ^2000", "Apartment ^2000", "Plaza ^4000"],
+                smartBackspace: false,
+                loop: true,
+                showCursor: true,
+                cursorChar: "|",
+                typeSpeed: 50,
+                backSpeed: 30,
+                startDelay: 800
+            });
 
-        var typed = new Typed('.typed', {
-            strings: ["House ^2000", "Apartment ^2000", "Plaza ^4000"],
-            smartBackspace: false,
-            loop: true,
-            showCursor: true,
-            cursorChar: "|",
-            typeSpeed: 50,
-            backSpeed: 30,
-            startDelay: 800
-        });
+        </script>
 
-        $('.slick-lancers').slick({
-            infinite: false,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            dots: true,
-            arrows: true,
-            adaptiveHeight: true,
-            responsive: [
-                {
+        <script>
+            $('.slick-lancers').slick({
+                infinite: false,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: true,
+                adaptiveHeight: true,
+                responsive: [{
                     breakpoint: 1292,
                     settings: {
                         slidesToShow: 2,
@@ -114,8 +117,7 @@
                         dots: true,
                         arrows: false
                     }
-                },
-                {
+                }, {
                     breakpoint: 993,
                     settings: {
                         slidesToShow: 2,
@@ -123,8 +125,7 @@
                         dots: true,
                         arrows: false
                     }
-                },
-                {
+                }, {
                     breakpoint: 769,
                     settings: {
                         slidesToShow: 1,
@@ -132,9 +133,16 @@
                         dots: true,
                         arrows: false
                     }
-                }
-            ]
-        });
-    </script>
-    </body>
+                }, ]
+            });
+
+        </script>
+
+        <!-- MAIN JS -->
+        <script src="{{asset('/')}}frontend/assets/js/script.js"></script>
+
+    </div>
+    <!-- Wrapper / End -->
+</body>
+
 </html>

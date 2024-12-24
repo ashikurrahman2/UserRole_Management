@@ -1,5 +1,3 @@
-<!-- resources/views/admin/bank/slider/edit.blade.php -->
-
 <form action="{{ route('property.update', $property->id) }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
@@ -36,6 +34,19 @@
             <input type="text" class="form-control" id="property_elements" name="property_elements" value="{{ $property->property_elements }}" required>
             <small id="emailHelp" class="form-text text-muted">This is your property</small>
         </div>
+
+        <div class="form-group">
+          <label for="property_bath" class="col-form-label pt-0">Property Bath<sup class="text-size-20 top-1">*</sup></label>
+            <input type="number" class="form-control" id="property_bath" name="property_bath" value="{{ $property->property_bath }}" required>
+            <small id="emailHelp" class="form-text text-muted">Must be type number</small>
+        </div>
+
+        <div class="form-group">
+          <label for="property_sqrt" class="col-form-label pt-0">Property Sqrt<sup class="text-size-20 top-1">*</sup></label>
+            <input type="text" class="form-control" id="property_sqrt" name="property_sqrt" {{ $property->property_sqrt }} required>
+            <small id="emailHelp" class="form-text text-muted">This is character. If you want type number</small>
+        </div>
+
 
         <div class="form-group">
           <label for="property_amount" class="col-form-label pt-0">Property Amount<sup class="text-size-20 top-1">*</sup></label>

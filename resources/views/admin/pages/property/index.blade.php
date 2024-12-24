@@ -34,13 +34,15 @@
                   <thead>
                     <tr>
                       <th>SL</th>
-                      <th>Property Title</th>
-                      <th>Property Image</th>
-                      <th>Property Address</th>
-                      <th>Property Element</th>
-                      <th>Property Amount</th>
-                      <th>Property Action</th>
-                      <th>Action</th>
+                        <th>Property Title</th>
+                        <th>Property Image</th>
+                        <th>Property Address</th>
+                        <th>Property Bed</th>
+                        <th>Property Bath</th>
+                        <th>Property Sqrt</th>
+                        <th>Property Amount</th>
+                        <th>Property Action</th>
+                        <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -52,7 +54,9 @@
                         <th>Property Title</th>
                         <th>Property Image</th>
                         <th>Property Address</th>
-                        <th>Property Element</th>
+                        <th>Property Bed</th>
+                        <th>Property Bath</th>
+                        <th>Property Sqrt</th>
                         <th>Property Amount</th>
                         <th>Property Action</th>
                         <th>Action</th>
@@ -98,9 +102,21 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="property_elements" class="col-form-label pt-0">Property Element<sup class="text-size-20 top-1">*</sup></label>
-                      <input type="text" class="form-control" id="property_elements" name="property_elements" required>
-                      <small id="emailHelp" class="form-text text-muted">This is your Brand</small>
+                    <label for="property_elements" class="col-form-label pt-0">Property Bed<sup class="text-size-20 top-1">*</sup></label>
+                      <input type="number" class="form-control" id="property_elements" name="property_elements" required>
+                      <small id="emailHelp" class="form-text text-muted">Must be type number</small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="property_bath" class="col-form-label pt-0">Property Bath<sup class="text-size-20 top-1">*</sup></label>
+                      <input type="number" class="form-control" id="property_bath" name="property_bath" required>
+                      <small id="emailHelp" class="form-text text-muted">Must be type number</small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="property_sqrt" class="col-form-label pt-0">Property Sqrt<sup class="text-size-20 top-1">*</sup></label>
+                      <input type="text" class="form-control" id="property_sqrt" name="property_sqrt" required>
+                      <small id="emailHelp" class="form-text text-muted">This is property sqrt</small>
                   </div>
 
                   <div class="form-group">
@@ -156,6 +172,8 @@
                 { data: 'property_image', name: 'property_image' },
                 { data: 'property_address', name: 'property_address' },
                 { data: 'property_elements', name: 'property_elements' },
+                { data: 'property_bath', name: 'property_bath' },
+                { data: 'property_sqrt', name: 'property_sqrt' },
                 { data: 'property_amount', name: 'property_amount' },
                 { data: 'property_action', name: 'property_action' },
                 { data: 'action', name: 'action', orderable: false, searchable: false }
